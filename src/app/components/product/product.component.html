@@ -1,0 +1,13 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <input type="text" name="name" formControlName="name" />
+  <input type="number" name="quantity" formControlName="quantity" />
+
+  <button type="submit">Salvar</button>
+</form>
+
+
+<div *ngFor="let product of products$ | async">
+  Nome: {{ product.name }}
+  <br />
+  Quantidade: {{ product.quantity }}
+</div>
